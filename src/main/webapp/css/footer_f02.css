@@ -1,0 +1,34 @@
+.ac-gf-footer-legal-copyright {
+	width: 530px;
+	text-align: center;
+}
+.ac-gf-footer-legal-links {
+	width: 530px;
+	display: flex;
+	flex-wrap: nowrap;
+	/* 	justify-content: space-around; */
+}
+
+
+.ac-gf-footer-legal-links-item {
+	text-align: left;
+	list-style: none;
+	padding-right: 20px;
+	padding-left: 10px;
+}
+#hr_all {
+	text-align: left;
+	margin-left: 0px;
+	height:2;
+	background-color:LightSkyBlue;
+	width:530;
+}
+.highlight {
+	background-color: yellow; /* ハイライトの背景色 */
+}
+.marker {
+width: 5px; /* カラーマーカーの幅 */
+	background-color: red; /* カラーマーカーの色 */
+	display: inline-block;
+	margin-left: 5px; /* カラーマーカーとテキストの間隔 */
+}

@@ -1,0 +1,230 @@
+/*
+改善点：cssに紐づけるHTMLタグのIDとクラスの名前付けについては次回から考慮
+
+プロジェクトの規模、チームの要件、およびコーディングスタイルに応じて、IDやクラスの名前付け方法を選択。
+適切な名前付けと整理は、コードの保守性と可読性の品質を維持しやすく結構な手間が省ける。
+まず、プロジェクト全体もしくは独自で、用途ごとのクラス・ファイル・DBテーブル名、メソッド名、フィールド名、
+変数名、ID・クラスIDなど一貫性のある名前付けルールを決定し、予めリスト化しておくことが望ましい。
+
+クラス・ファイルの名称:
+各ページごとにユニークなIDやクラス名を使用する。
+これにより、スタイルやスクリプトが特定のページに対して制御でき、コードの管理が容易になる。
+
+再利用可能な名称:
+一部のIDやクラスは、特定のページに依存せずに全体的に再利用できる要素に対してのみ使用する。
+この場合、意味のある名前や一般的すぎる名前（例: button、headerなど）を避ける。
+
+インポートクラス・ファイルの名称:
+各ページと同様に特定のインポートJSPページに固有のスタイルやスクリプトがある場合、それに対応する名前を使用すること。
+ただし、共通のスタイルやスクリプトも存在するかもしれないので、適切な命名規則を使用して区別できるようにする。
+
+複数のIDやクラス名の利用について:
+一つのHTML要素に複数のIDやクラス名を付与することができるが、過剰なIDやクラスの使用はコードを複雑にし、
+保守性を低下させるため、なるべく避ける。
+
+順序：
+AtoZのページ順でAtoZの名称順に整列する。
+
+*/
+.general_template{
+	width: 55%;
+	color: steelblue;
+	text-align: center;
+	align-items: center;
+}
+#head_title {
+	font-weight: "bold";
+	border-color: Mediumturquoise;
+	text-align: center;
+}
+#login_form{
+	padding: 0 0 0px;
+	margin-left: 0;
+	color: steelblue;
+	text-align: center;
+}
+#link_top{
+	font-size: small;
+	font-weight: bold;
+	margin-left: 25%;
+	padding-left: 0px;
+	color: lightskyblue;
+	text-transform: uppercase;
+	text-align: right;
+}
+#info{
+	color: steelblue;
+}
+#list_base{
+	list-style: none;	
+}
+#search_form{
+	padding: 0 0 0px;
+	margin-left: 0;
+	color: steelblue;
+	text-align: center;
+}
+#result_list{
+	width: 95%;
+	text-align: center;
+}
+#info{
+	text-align: center;
+}
+.login_status {
+	margin-left: 25%;
+	padding-left: 0px;
+	text-align: center;
+	color: lightskyblue;	
+}
+.login_status a, span{
+	font-size: small;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+#ac_gf_footer_legal_copyright {
+	text-align: center;
+	color: steelblue;
+}
+#ac_gf_footer_legal_links {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: center;
+	/* justify-content: space-around;	*/
+}
+#ac_gf_footer_legal_links_item {
+	list-style: none;
+	padding-right: 30px;
+	padding-left: 15px;
+}
+#hr_hd {
+	height:5px;
+	margin-left: 0px;
+	text-align: left;
+	background-color: steelblue;
+	content: "";
+	position: static;
+	top: 0;
+	left: 0;
+	backdrop-filter: blur(55%);	/* ぼかしの強さを調整 */
+	filter: blur(18px);	/* ぼかしの程度を調整 */
+	z-index: +1;	/* 画像よりも下に配置 */	
+}
+#hr_all {
+	height:30px;
+	margin-left: 0px;
+	text-align: left;
+	background-color: steelblue;
+/*	background-color:Mediumturquoise;*/
+	content: "";
+	position: static;
+	top: 10;
+	left: 0;
+ 	backdrop-filter: blur(55%);	/* ぼかしの強さを調整 */
+	filter: blur(85px);	/* ぼかしの程度を調整 */
+	z-index: +1;	/* 画像よりも下に配置 */
+}
+a:link {
+	color: steelblue;
+	text-decoration: none;
+}
+a:visited {
+	color: mediumpurple;
+	text-decoration: underline;
+}
+a:hover {
+	color: Mediumturquoise;
+	text-decoration: underline;	
+}
+a:active {
+	color: #FF0000;
+	text-decoration: underline;
+}
+
+.highlight {
+	background-color: yellow; /* ハイライトの背景色 */
+}
+.marker {
+	width: 5px; /* カラーマーカー幅 */
+	background-color: red; /* カラーマーカー色 */
+	display: inline-block;
+	margin-left: 5px; /* カラーマーカーとテキスト間隔 */
+}
+
+/* https://web-dev.tech/front-end/css/text-scroll-banner/ */
+/* https://torisky.com/%E6%B0%97%E8%B1%A1%E5%BA%81%E3%81%AE%E5%A4%A9%E6%B0%97%E4%BA%88%E5%A0%B1json%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92javascript%E3%81%A7%E5%88%A9%E7%94%A8%E3%81%99%E3%82%8B%E6%B5%81%E3%82%8C/ */
+/* バナー本体 */
+.news-banner {
+  display: block;
+  height: 50px;
+  width: 100%;
+  background-color: lightskyblue;
+  overflow: hidden;
+  transform: translate(0%,-70%);
+  background-color: transparent;
+}
+
+/* バナー内コンテンツ */
+.news-banner__content {
+  display: inline-block;
+  color: steelblue;
+  line-height: 30px;
+  padding-left: 100%;
+ vertical-align:-30%;
+  white-space: nowrap;
+  animation: animate-banner 30s linear infinite;
+}
+
+/* バナー内の要素をすべて選択 */
+.news-banner__content > * {
+  display: inline-block;
+}
+
+/* 横にスクロールさせるアニメーション */
+@keyframes animate-banner {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/*	https://gurio.work/marker-animation01/	*/
+/*テキストマーカーアニメーション*/
+/*.marker-animation.active{
+    background-position: -100% .5em;
+}
+.marker-animation {
+    background-image: -webkit-linear-gradient(left, transparent 50%,lightskyblue 50%);
+    background-image: -moz-linear-gradient(left, transparent 50%, lightskyblue 50%);
+    background-image: -ms-linear-gradient(left, transparent 50%,lightskyblue 50%);
+    background-image: -o-linear-gradient(left, transparent 50%,lightskyblue 50%);
+    background-image: linear-gradient(left, transparent 50%,lightskyblue 50%);
+    background-repeat: repeat-x;
+    background-size: 200% .8em;
+    background-position: 0 .5em;
+    transition: all 4s ease;
+		font-weight: bold;	
+}
+*/
+
+/*	テキストマーカーアニメーション	ver 2	*/
+/*	https://html-css-wordpress.com/moving-marker-self-made/	*/
+.marker-animation.active {
+background-position: -100% .5em;
+}
+.marker-animation {
+display: inline;
+background-repeat: repeat-x;
+background-size: 200% .9em;
+background-position: 0 .1em;
+transition: all 20s ease;
+/*transition: all 3s cubic-bezier(0.68, -0.55, 0.27, 1.55);*/
+/*font-weight: bold;	*/
+}
+.ma-blue {
+background-image: -webkit-linear-gradient(left, transparent 50%, #9cf 50%);
+background-image: -moz-linear-gradient(left, transparent 50%, #9cf 50%);
+background-image: linear-gradient(to right, transparent 50%, #9cf 50%);
+}
