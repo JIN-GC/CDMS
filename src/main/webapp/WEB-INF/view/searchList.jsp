@@ -21,7 +21,7 @@
 			<p><%= result.getContents_data() %></p>
 			<% } %>　--%>
 			<c:forEach var="result" items="${SerchDataList}">
-				<div class="result_list_title"><p style="font-wight: bold">
+				<div class="result_list_title"><strong><p>
 					<c:out value="${result.contents_id}" />
 					:
 					<c:out value="${result.contents_title}" />
@@ -30,7 +30,7 @@
 					:
 					<c:out value="${result.contents_closed_at}" />
 					:
-				</div></p>
+				</div></p></strong>
 				<div class="result_list_data" ><p id="result" class="marker-animation ma-blue">
 					<c:out value="${result.contents_data}" />
 				</div></p>

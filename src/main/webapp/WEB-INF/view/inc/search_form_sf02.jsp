@@ -83,8 +83,8 @@
 <!-- 検索文字ハイライト(main_02.css)  -->
 <script defer type="text/javascript">
 //	DOM（HTML）読み込み完了後の処理
-//$(document).ready(function() {
-$(window).on('load', function() {
+$(document).ready(function() {
+//$(window).on('load', function() {
 //	検索キーワード取得
 let searchTerm1 = "${ contents_title }";
 let searchTerm2 = "${ contents_data }";
