@@ -58,7 +58,7 @@ AtoZのページ順でAtoZの名称順に整列する。
 #list_base{
 	list-style: none;	
 }
-#search_form{
+#search_form insert_form{
 	padding: 0 0 0px;
 	margin-left: 0;
 	color: steelblue;

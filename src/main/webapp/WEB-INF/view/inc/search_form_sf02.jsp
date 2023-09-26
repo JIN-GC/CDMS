@@ -1,6 +1,7 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 <!-- 検索フォーム表示	-->
 <hr id="hr_all"></hr>
+
 <form action="SearchContents" method="POST" accept-charset="UTF-8">
 
 <div id="search_form"><p>
@@ -79,9 +80,11 @@
  </div>
 </form>
 
+<!-- 検索文字ハイライト(main_02.css)  -->
 <script defer type="text/javascript">
 //	DOM（HTML）読み込み完了後の処理
-$(document).ready(function() {
+//$(document).ready(function() {
+$(window).on('load', function() {
 //	検索キーワード取得
 let searchTerm1 = "${ contents_title }";
 let searchTerm2 = "${ contents_data }";
@@ -94,21 +97,33 @@ $(".result_list_data").find("p").each(function() {
 	let highlightedText2 = text.replace(regex2, '<span class="highlight">$&</span>');
 	$(this).html(highlightedText2);
 });
-
 $(".result_list_title").find("p").each(function() {
 	let text = $(this).text();
 	let highlightedText1 = text.replace(regex1, '<span class="highlight">$&</span>');
 	$(this).html(highlightedText1);
 });
-/*
+});
 // マッチした行の横にカラーマーカー表示（要修正）
+/*
 $(".highlight").each(function() {
 $(this).after('<ul class="marker"><li></li></ul>');
 });
-*/
-});
 
+$(".highlight").each(function() {
+	$(this).before('<div style="display: grid; grid-template-columns: auto 1fr;"><p class="highlight">・</p><p></p></div>');
+});
+ 
+<div style="display: grid; grid-template-columns: auto 1fr;">
+  <p>左に寄せたい要素</p>
+  <p>通常の段落</p>
+</div>
+*/
 </script>
+
+<!-- /*	https://gurio.work/marker-animation01/ -->
+<!-- https://html-css-wordpress.com/moving-marker-self-made/ -->
+<!-- テキストマーカーアニメーション	ver 2 (main_02.css) -->
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script>
 //	テキストマーカーアニメーション

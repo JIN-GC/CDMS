@@ -9,14 +9,10 @@
     <p >　＜＜ピン・ポン・パン・ポン　♪＞＞　天気予報を終わります。　詳しい予報を知りたい時は　クリックして　　気象庁の予報を見てみてください。 ♫</p>   
   </div>
 </a>
-<!-- バナー（リンクなし） -->
-<!--
-<div class="news-banner">
-    <div class="news-banner__content">
-    <p>お知らせテキストをここに入れてください！</p>
-  </div>
-</div>
- -->
- 
+<!-- main.jsのformatWeather（）により、id="banner_topic"の要素に文字列を追加 -->
+<!-- CSSのみでテキストが横に流れていくバナー -->
+<!-- https://web-dev.tech/front-end/css/text-scroll-banner/ (main_m02.css) -->
+<!-- https://torisky.com/気象庁の天気予報jsonファイルをjavascriptで利用する流れ/ （main.js） -->
 
+ 
  
